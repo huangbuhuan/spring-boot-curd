@@ -19,6 +19,7 @@ public class FilterTest implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletResponse httpServletResponse = (HttpServletResponse)response;
         httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+        System.out.println("被过滤啦");
         chain.doFilter(request, response);
     }
 
