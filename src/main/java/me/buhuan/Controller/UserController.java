@@ -30,6 +30,11 @@ public class UserController {
         return userService.get(id);
     }
 
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
+    public String post(Integer id) {
+        return "post";
+    }
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public Integer update(User user) {
         return userService.update(user);
